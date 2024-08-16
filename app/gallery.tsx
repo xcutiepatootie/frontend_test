@@ -99,7 +99,7 @@ const Gallery = ({ users }: GalleryProps) => {
                     <FaPhone className="icon" />
                     <div className="value">{selectedUser.phone}</div>
                   </div>
-                  <div className="fields">
+                  <div className="field">
                     <FaEnvelope className="icon" />
                     <div className="value">{selectedUser.email}</div>
                   </div>
