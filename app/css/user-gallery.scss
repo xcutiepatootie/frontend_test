@@ -1,6 +1,18 @@
 .user-gallery {
   width: 100%;
 
+  > .quote-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > h1{
+      color: rgb(209, 86, 209);
+    }
+    
+  }
+
   > .items {
     display: grid;
     grid-template-columns: 1fr;

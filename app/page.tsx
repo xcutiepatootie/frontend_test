@@ -3,9 +3,31 @@ import styles from "./page.module.css";
 
 import Gallery from "./gallery";
 
-export default function Home() {
+async function getData() {
+  try {
+    const fetchData = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data = await fetchData.json();
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function getQuote() {
+  try {
+    const fetchData = await fetch("https://zenquotes.io/api/random");
+    const data = await fetchData.json();
+    console.log(data);
+    return data[0];
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export default async function Home() {
   // data from https://jsonplaceholder.typicode.com/users
-  const users = [
+  /* const users = [
     {
       id: 1,
       name: "Leanne Graham",
@@ -236,10 +258,13 @@ export default function Home() {
         bs: "target end-to-end models",
       },
     },
-  ];
+  ]; */
+  const users = await getData();
+  const quote = await getQuote();
+  console.log(quote);
   return (
     <main className={styles.main}>
-      <Gallery users={users} />
+      <Gallery users={users} quote={quote} />
     </main>
   );
 }
