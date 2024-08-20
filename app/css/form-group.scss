@@ -1,0 +1,16 @@
+.form-group {
+  display: flex;
+  align-items: center;
+
+  > .label {
+    font-weight: 600;
+  }
+
+  > .input {
+    min-width: 160px;
+  }
+
+  > .label + .input {
+    margin-left: 16px;
+  }
+}

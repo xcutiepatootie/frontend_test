@@ -1,6 +1,13 @@
 .user-gallery {
   width: 100%;
 
+  > .heading {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   > .items {
     display: grid;
     grid-template-columns: 1fr;
