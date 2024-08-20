@@ -1,7 +1,6 @@
 .user-card {
   display: flex;
   flex-flow: row nowrap;
-
   padding: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
   border-radius: 4px;
@@ -38,4 +37,12 @@
   > .info > .company {
     color: #253858;
   }
+
+  @media screen and (max-width: 700px) {
+    width: auto;
+    margin-right: 0;
+    
+
+  }
+
 }
